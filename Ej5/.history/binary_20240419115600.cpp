@@ -37,6 +37,7 @@ bool Binary::busqueda_bin(){
             return false;
         } else repetir = true;
     }while(repetir);
+    
 }
 void Binary::ejecutar(){
     int var{0};
