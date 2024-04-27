@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+class MultiMatrix{
+public:
+    int matriz[3][3][3];
+    int m1[3];
+    int m2[3];
+    int *arrColu, *arrFila;
+    int (*ptr_1)[3][3];
+    int size;
+    bool repetir;
+    MultiMatrix();
+    void print();
+    void multiplicar(); 
+    int calcular_valor();
+    int* extraer_colu(int i);
+    int* extraer_fila(int j);
+};

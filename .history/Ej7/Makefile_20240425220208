@@ -1,0 +1,21 @@
+CC = /usr/bin/clang++
+CFLAGS = -std=c++17 -stdlib=libc++ -g
+LDFLAGS = -lncurses  # Add this line to link with ncurses
+SRCS = main.cpp ex.cpp reversy.cpp 
+OBJS = $(SRCS:.cpp=.o)
+TARGET = ej7
+
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+    $(CC) $(CFLAGS) $(OBJS) -o $(TARGET) $(LDFLAGS)  # Modify this line to include $(LDFLAGS)
+
+%.o: %.cpp
+    $(CC) $(CFLAGS) -c $
+
+
+clean:
+	rm -f $(OBJS) $(TARGET)
+
+clean_o:
+	rm -f $(OBJS)
